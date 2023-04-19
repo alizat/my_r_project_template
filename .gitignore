@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# data & figures & old files
+#data/
+#figures/
+#shiny/
+#yesteryear/
