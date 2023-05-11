@@ -41,5 +41,6 @@ vignettes/*.pdf
 # data & figures & old files
 #data/
 #figures/
+#rubbish/
 #shiny/
 #yesteryear/
