@@ -6,7 +6,7 @@
 ## Intro
 
 Inspired by the [Cookiecutter Data
-Science](https://drivendata.github.io/cookiecutter-data-science/) project
+    Science](https://drivendata.github.io/cookiecutter-data-science/) project
 structure, this project template presents a good starting project structure for
 any new R project. I created this repo to be used in my data science work at
 [Synapse Analytics](https://www.synapse-analytics.io/).
@@ -71,7 +71,7 @@ You may modify `present_release.txt` to contain the following:
 
 * general reason(s) why the code is being worked on nowadays
 * details of current release such as latest changes, added features, fixed bugs, etc.
-* current prediction performance, date when data was lastupdated, etc.
+* current prediction performance, date when data was last updated, etc.
 
 When it is time to push to GitHub/GitLab, you may do either of the following:
 
@@ -79,6 +79,7 @@ When it is time to push to GitHub/GitLab, you may do either of the following:
 * include `present_release.txt` in `.gitignore`, push to GitHub/GitLab, and then add contents of `present_release.txt` as release notes for the latest version on GitHub/GitLab. 
 
 After pushing to GitHub/GitLab, empty `present_release.txt` to make room for
-details of the next release.
+details of the next release. Alternatively, you may simply update 
+`present_release.txt` by appending the latest notes to the top of the file.
 
 ----
