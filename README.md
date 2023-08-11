@@ -41,7 +41,7 @@ want to make sure that ***it has no spaces and is all lowercase with underscores
 
 ## Modify this `README.md` file
 
-You may modify this file to mention the following:
+You may modify this README file to mention the following:
 
 * the project scope/purpose
 * the data sources under `./data`
@@ -50,22 +50,7 @@ You may modify this file to mention the following:
 
 ----
 
-## Modify `.gitignore`
-
-You may uncomment the last few lines in `.gitignore` so they would not be
-tracked by Git anymore.
-
-```
-# data & figures & old files
-#data/
-#figures/
-#shiny/
-#yesteryear/
-```
-
-----
-
-## Modify `present_release.txt` (optional)
+## Modify `present_release.txt`
 
 You may modify `present_release.txt` to contain the following: 
 
@@ -81,5 +66,68 @@ When it is time to push to GitHub/GitLab, you may do either of the following:
 After pushing to GitHub/GitLab, empty `present_release.txt` to make room for
 details of the next release. Alternatively, you may simply update 
 `present_release.txt` by appending the latest notes to the top of the file.
+
+----
+
+## Modify `.gitignore`
+
+You may un-comment the last few lines in `.gitignore` so they would not be
+tracked by Git anymore.
+
+```
+#data/
+#figures/
+#rubbish/
+#shiny/
+#yesteryear/
+#code/logs/
+```
+
+----
+
+## Directory structure
+
+```
+├── README.md           <- The top-level README for developers using this project.
+├── present_release.txt <- notes regarding the current version of this project.
+├── .gitignore          <- files & folders to be ignored by Git.
+│
+├── code                <- Source code for use in this project.
+│   |
+│   ├── data_wrangling  <- Scripts to download or generate data
+│   │   ├── dataset.R   <- retrieve and process data & prepare data set(s).
+│   │   └── features.R  <- generate new features.
+│   │
+│   ├── eda             <- analyses on the data, including data summaries and visualizations.
+│   │
+│   ├── modeling        <- train models and then use trained models to make predictions.
+│   │   ├── predict.R
+│   │   └── train_model.R
+│   │
+│   ├── logs            <- to (optionally) store console output from executed scripts.
+│   │
+│   └── common_funcs.R  <- common functions that are used across projects.
+│
+├── data
+│   ├── external        <- data from third party sources.
+│   ├── interim         <- intermediate data that is temporary.
+│   ├── processed       <- final data sets for analysis and modeling.
+│   └── raw             <- original, immutable data dump.
+│
+├── figures             <- generated graphics for reporting
+│
+├── models              <- train/val/test sets, trained models & prediction summaries.
+│
+├── rubbish             <- stuff you'll probably never need but wanna keep anyway.
+│
+├── shareables          <- files that were shared between us and the client.
+│   ├── origin_client   <- files shared from client to us.
+│   └── origin_us       <- files shared from us to client or shared internally.
+│
+├── shiny               <- where self-contained shiny apps live.
+│   └── first_shiny_app <- an example shiny app (each shiny app to be in its own folder).
+│
+└── yesteryear          <- old scripts/data/figures.
+```
 
 ----
