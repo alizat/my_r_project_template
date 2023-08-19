@@ -1,0 +1,106 @@
+---
+title: "First Encounter with the Data"
+author: "Data Scientist Extraordinaire"
+date: "2032-12-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# my favorite libraries
+
+suppressMessages({
+    library(tidyverse)
+    library(lubridate)
+    library(plotly)
+    library(tictoc)
+    library(glue)
+
+    library(shiny)
+    library(leaflet)
+    library(DT)
+
+    options(dplyr.summarise.inform = FALSE)
+})
+```
+
+<br>
+<hr style="height:3px;background-color:gray">
+<br>
+
+
+## Loading the data
+
+Mention the data sources that you are loading, their types (flat files, databases, etc.) and what each of them contains.
+
+```{r load_data}
+my_data <- iris
+```
+
+<br>
+<hr style="height:3px;background-color:gray">
+<br>
+
+
+## Viewing the data
+
+A preliminary look at the data and the columns that are present within.
+
+```{r view_data, echo=FALSE}
+display_me = my_data
+colnames(display_me) <-
+    colnames(display_me) %>%
+    str_split('_') %>%
+    map_chr(~ .x %>% unlist() %>% paste(collapse = ' ')) %>%
+    str_to_title()
+# display_me <-
+#     display_me %>%
+#     mutate_if(is.numeric, round, digits = 1)
+display_me %>%
+    datatable(
+        filter = 'top',
+        rownames = FALSE,
+        options = list(
+            dom = 'ltip',
+            columnDefs = list(
+                list(className = 'dt-center', targets = '_all'),
+                list(width = paste0(100 / ncol(display_me), '%'), targets = '_all')
+            )
+        )
+    ) %>%
+    formatStyle(1:ncol(display_me), lineHeight = '40%') %>%
+    formatRound(colnames(display_me)[display_me %>% map_lgl(is.numeric)], digits = 1)
+```
+
+<br>
+<hr style="height:3px;background-color:gray">
+<br>
+
+
+## Summary of the data
+
+Quick overview of the data being analyzed.
+
+```{r summarize_data, echo=FALSE}
+skimr::skim(my_data)
+```
+
+<br>
+<hr style="height:3px;background-color:gray">
+<br>
+
+
+## Analyses
+
+Insert your analyses here!
+
+```{r}
+iris %>% ggplot(aes(Sepal.Length, Sepal.Width)) + geom_point(aes(color = Species))
+```
+
+Insert your analyses here!
+
+```{r}
+iris %>% summary()
+```
