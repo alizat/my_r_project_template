@@ -10,3 +10,7 @@ read_entire_xlsx <- function(xlsx_file) {
 is_number <- function(x) {
     suppressWarnings({!is.na(as.numeric(x))})
 }
+
+equals_na <- function(a, b) {
+    if_else(a == b | (is.na(a) & is.na(b)),  TRUE, FALSE) %>% replace_na(FALSE)
+}
