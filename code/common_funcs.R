@@ -1,12 +1,5 @@
 #' Read all sheets of an xlsx file
 #'
-#' @description
-#'   \code{read_entire_xlsx()} loads all sheets of a given xlsx file and
-#'   returns them as a list of data frames (or as a single data frame if the
-#'   xlsx file contains only a single sheet).
-#'
-#' @param xlsx_file an xlsx file
-#'
 #' @return
 #'   If the specified xlsx file contains a single sheet, a data frame is returned.
 #'   If there are multiple sheets then a list of data frame is returned (one data
@@ -22,12 +15,7 @@ read_entire_xlsx <- function(xlsx_file) {
 
 
 
-#' Is it a number?
-#'
-#' @param x the element to determine if it is a number (more precisely, whether
-#'   \code{x} can be coerced into a number)
-#'
-#' @return TRUE if \code{x} is a number, FALSE otherwise
+#' Is it a number? (more precisely, can x be coerced into a number)
 #'
 #' @examples
 #' is_number(4)    # TRUE
@@ -47,15 +35,6 @@ is_number <- function(x) {
 
 #' Reduce identical consecutive characters in a string into a single character
 #'
-#' @description
-#'   \code{str_squish_consecutive()} reduces any consecutive identical
-#'   characters into a single character. Additionally, it removes any leading or
-#'   trailing whitespace characters.
-#'
-#' @param string a given input string
-#'
-#' @return the same input string with the consecutive identical character reduced
-#'
 #' @examples
 #' str_squish_consecutive('apple')  # "aple"
 #' str_squish_consecutive('   this isss   a    MESSY string.   ')  # "this is a MESY string."
@@ -64,4 +43,18 @@ str_squish_consecutive <- function(string) {
     vr <- rle(v)
     vr$lengths[] <- 1
     stringr::str_squish(paste(inverse.rle(vr), collapse = ''))
+}
+
+
+
+#' remove columns that are all NA's from dataframe
+na_column_killer <- function(df) {
+    df[!sapply(df, function(x){all(is.na(x))})]
+}
+
+
+
+#' remove constant-valued columns that are all NA's from dataframe
+constant_valued_column_killer <- function(df) {
+    df[sapply(df, dplyr::n_distinct) > 1]
 }
