@@ -58,3 +58,14 @@ na_column_killer <- function(df) {
 constant_valued_column_killer <- function(df) {
     df[sapply(df, dplyr::n_distinct) > 1]
 }
+
+#' assigns a letter based on a score from the range [0, 100]
+letter_grader <- function(score,
+                          minABCD = c(90, 80, 70, 60)) {
+    score <-
+        if (score >= minABCD[1]) 'A' else
+            if (score >= minABCD[2]) 'B' else
+                if (score >= minABCD[3]) 'C' else
+                    if (score >= minABCD[4]) 'D' else 'F'
+    return(score)
+}
