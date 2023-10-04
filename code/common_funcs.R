@@ -54,10 +54,12 @@ na_column_killer <- function(df) {
 
 
 
-#' remove constant-valued columns that are all NA's from dataframe
+#' remove constant-valued columns from dataframe
 constant_valued_column_killer <- function(df) {
     df[sapply(df, dplyr::n_distinct) > 1]
 }
+
+
 
 #' assigns a letter based on a score from the range [0, 100]
 letter_grader <- function(score,

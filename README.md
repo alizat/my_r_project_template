@@ -109,10 +109,10 @@ tracked by Git anymore.
 │   └── common_funcs.R  <- common functions that are used across projects.
 │
 ├── data
-│   ├── external        <- data from third party sources.
-│   ├── interim         <- intermediate data that is temporary.
+│   ├── raw             <- original, immutable data dump.
 │   ├── processed       <- final data sets for analysis and modeling.
-│   └── raw             <- original, immutable data dump.
+│   ├── external        <- data from third party sources.
+│   └── tmp             <- intermediate data that is temporary.
 │
 ├── figures             <- generated graphics for reporting
 │
