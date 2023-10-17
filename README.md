@@ -121,8 +121,9 @@ tracked by Git anymore.
 ├── rubbish             <- stuff you'll probably never need but wanna keep anyway.
 │
 ├── shareables          <- files that were shared between us and the client.
-│   ├── origin_client   <- files shared from client to us.
-│   └── origin_us       <- files shared from us to client or shared internally.
+│   ├── from_client     <- files shared from client to us.
+│   ├── from_us         <- files shared from us to client.
+│   └── internal        <- files shared internally.
 │
 ├── shiny               <- where self-contained shiny apps live.
 │   └── first_shiny_app <- an example shiny app (each shiny app to be in its own folder).
