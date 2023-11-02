@@ -111,7 +111,7 @@ tracked by Git anymore.
 ├── data
 │   ├── raw             <- original, immutable data dump.
 │   ├── processed       <- final data sets for analysis and modeling.
-│   ├── external        <- data from third party sources.
+│   ├── external        <- data from third party sources (i.e. NOT from the client's side).
 │   └── tmp             <- intermediate data that is temporary.
 │
 ├── figures             <- generated graphics for reporting
@@ -120,7 +120,7 @@ tracked by Git anymore.
 │
 ├── rubbish             <- stuff you'll probably never need but wanna keep anyway.
 │
-├── shareables          <- files that were shared between us and the client.
+├── shareables          <- files that were shared between us and the client, or internally.
 │   ├── from_client     <- files shared from client to us.
 │   ├── from_us         <- files shared from us to client.
 │   └── internal        <- files shared internally.
