@@ -90,6 +90,7 @@ tracked by Git anymore.
 ```
 ├── README.md           <- The top-level README for developers using this project.
 ├── present_release.txt <- notes regarding the current version of this project.
+├── backlog.txt         <- TODOs for (much?) later, ideas to consider, etc.
 ├── .gitignore          <- files & folders to be ignored by Git.
 │
 ├── code                <- Source code for use in this project.
