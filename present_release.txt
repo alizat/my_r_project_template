@@ -1,0 +1,22 @@
+** 2023-03-16
+- adjusted model to accommodate change of business paradigm: product-based to granting approved limit
+- performed experiments to test how well the ML model would perform under new paradigm
+- trained new ML models for deployment in production
+
+
+** 2022-09-04
+- reviewed model to study production model deterioration
+- re-trained model using same parameters as before
+
+
+** 2022-06-22
+- explored relations between `<target variable of interest>` & features: `<feat1>`, `<feat2>`, `<feat3>`
+- performed multiple experiments to improve ML model prediction performance
+- removed leakage variables from modeling: `<feat5>` & `<feat6>`
+
+
+** 2022-04-15
+- processed raw data
+- prepared features for modeling
+- explored data
+- generated initial model for predicting `<target variable of interest>`
