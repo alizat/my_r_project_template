@@ -1,7 +1,7 @@
 TODOs for later:
--
--
+- Feature selection via backward elimination
+- Try other prediction models (Random Forest, CatBoost) and observe how they compare to XGBoost
 
 Ideas to consider:
--
--
+- combine bagging and boosting in single hybrid model to improve prediction performance further
+- stacked ensemble
