@@ -42,6 +42,6 @@ vignettes/*.pdf
 #data/
 #figures/
 #rubbish/
-#shiny/
+#shiny/*/rsconnect/
 #yesteryear/
 #code/logs/
