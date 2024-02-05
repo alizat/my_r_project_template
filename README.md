@@ -106,6 +106,8 @@ tracked by Git anymore.
 │   │   └── train_model.R
 │   │
 │   ├── logs            <- to (optionally) store console output from executed scripts.
+|   |                      e.g. [TERMINAL] nohup Rscript data_grabber.R > midnight_data_grab.log 2>&1 &
+|   |                      e.g. using the sink() function in R
 │   │
 │   └── common_funcs.R  <- common functions that are used across projects.
 │
