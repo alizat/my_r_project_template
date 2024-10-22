@@ -17,22 +17,39 @@ any new R project. I created this repo to be used in my data science work at
 
 RStudio settings that I typically set are as follows:
 
-* Tools > Global Options > Code > Editing > check "Insert spaces for tab"
-* Tools > Global Options > Code > Editing > Tab Width: `4`
-* Tools > Global Options > Code > Display > check "Highlight selected line"
-* Tools > Global Options > Code > Display > check "Allow scroll past end of document"
-* Tools > Global Options > Code > Display > check "Highlight R function calls"
-* Tools > Global Options > Code > Display > check "Use rainbow parentheses"
-* Tools > Global Options > Code > Saving > check "Ensure that source files end with newline"
-* Tools > Global Options > Code > Saving > check "Strip trailing horizontal whitespace when saving"
-* Tools > Global Options > Code > Completion > "Show code completions" = "When Triggered ($, ::)"
-* Tools > Global Options > Code > Code > Diagnostics > check everything! (except "Warn if variable has no definition in scope")
-* Tools > Project Options > Code Editing > check "Ensure that source files end with newline"
-* Tools > Project Options > Code Editing > check "Strip trailing horizontal whitespace when saving"
+* Tools
+    * Global Options
+        * Code
+            * Editing
+                * check `Insert spaces for tab`
+                * `Tab Width`: *4*
+            * Display
+                * check `Highlight selected line`
+                * check `Allow scroll past end of document`
+                * check `Highlight R function calls`
+                * check `Use rainbow parentheses`
+            * Saving
+                * check `Ensure that source files end with newline`
+                * check `Strip trailing horizontal whitespace when saving`
+            * Completion
+                * `Show code completions` = *When Triggered ($, ::)*
+            * Code
+                * Diagnostics
+                    * check everything! (except `Warn if variable has no definition in scope`)
+    * Project Options
+        * General
+            * `Restore .RData into workspace at startup`: *No*
+            * `Save workspace to .RData on exit`: *No*
+            * `Always save history (even if not saving .RData)`: *Yes*
+            * check `Disable .Rprofile execution on session start/resume`
+            * check `Quit child processes on exit`
+        * Code Editing
+            * check `Ensure that source files end with newline`
+            * check `Strip trailing horizontal whitespace when saving`
 
 Assuming you have the `styler` package installed, do the following before committing in Git:
-* Tools > Addins > Browse Addins > "styler - Set style" > `styler::tidyverse_style(indent_by = 4)`
-* Tools > Addins > Browse Addins > "styler - Set active file"
+* Tools > Addins > Browse Addins > `styler - Set style` > *styler::tidyverse_style(indent_by = 4)*
+* Tools > Addins > Browse Addins > `styler - Set active file`
 
 Finally, if there is a different folder or file that you feel like adding later, you may
 want to make sure that ***it has no spaces and is all lowercase with underscores!***
@@ -75,12 +92,12 @@ You may un-comment the last few lines in `.gitignore` so they would not be
 tracked by Git anymore.
 
 ```
+#code/logs/
 #data/
 #figures/
 #rubbish/
 #shiny/
 #yesteryear/
-#code/logs/
 ```
 
 ----
