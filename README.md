@@ -28,9 +28,9 @@ RStudio settings that I typically set are as follows:
                 * check `Allow scroll past end of document`
                 * check `Highlight R function calls`
                 * check `Use rainbow parentheses`
+                * Indentation guides: `Rainbow lines`
             * Saving
-                * check `Ensure that source files end with newline`
-                * check `Strip trailing horizontal whitespace when saving`
+                * `Default text encoding`: *UTF-8*
             * Completion
                 * `Show code completions` = *When Triggered ($, ::)*
             * Code
@@ -44,15 +44,11 @@ RStudio settings that I typically set are as follows:
             * check `Disable .Rprofile execution on session start/resume`
             * check `Quit child processes on exit`
         * Code Editing
-            * check `Ensure that source files end with newline`
-            * check `Strip trailing horizontal whitespace when saving`
+            * `Text encoding`: *UTF-8*
 
 Assuming you have the `styler` package installed, do the following before committing in Git:
 * Tools > Addins > Browse Addins > `styler - Set style` > *styler::tidyverse_style(indent_by = 4)*
 * Tools > Addins > Browse Addins > `styler - Set active file`
-
-Finally, if there is a different folder or file that you feel like adding later, you may
-want to make sure that ***it has no spaces and is all lowercase with underscores!***
 
 ----
 
@@ -78,7 +74,7 @@ You may modify `present_release.txt` to contain the following:
 When it is time to push to GitHub/GitLab, you may do either of the following:
 
 * simply push `present_release.txt` to GitHub/GitLab.
-* include `present_release.txt` in `.gitignore`, push to GitHub/GitLab, and then add contents of `present_release.txt` as release notes for the latest version on GitHub/GitLab. 
+* include `present_release.txt` in `.gitignore`, push to GitHub/GitLab, and then manually add contents of `present_release.txt` as release notes for the latest version on GitHub/GitLab. 
 
 After pushing to GitHub/GitLab, empty `present_release.txt` to make room for
 details of the next release. Alternatively, you may simply update 
@@ -150,5 +146,8 @@ tracked by Git anymore.
 │
 └── yesteryear          <- old scripts/data/figures.
 ```
+
+Finally, if there is an additional folder or file that you feel like adding later, you may
+want to make sure that ***it has no spaces and is all lowercase with underscores!***
 
 ----
